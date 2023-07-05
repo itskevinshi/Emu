@@ -12,6 +12,23 @@ int Disassemble8080Op(unsigned char *codebuffer, int pc)
     printf ("%04x ", pc);    
     switch (*code)    
     {    
+
+        /* 
+        Bing AI answered these questions...
+
+        Q: What does the # and $ mean?
+        A: In assembly language, the # symbol is often used to indicate an immediate value, 
+        meaning the value is part of the instruction itself, rather than being stored in memory. 
+        The $ symbol is often used to indicate a hexadecimal value.
+
+        Q: Why doesn't case 0x3a use a #?
+        A: The LDA instruction stands for “Load Accumulator” and it loads the accumulator with the 
+        contents of the memory location specified by the 16-bit address formed by concatenating the 
+        values of code[2] and code[1]. The $ symbol indicates that the values of code[2] and code[1] 
+        are in hexadecimal format. Since this instruction is loading data from a memory location, 
+        rather than using an immediate value, there is no need for a # symbol.
+        */
+
         case 0x00: printf("NOP"); break;    
         case 0x01: printf("LXI    B,#$%02x%02x", code[2], code[1]); opbytes=3; break;    
         case 0x02: printf("STAX   B"); break;    
