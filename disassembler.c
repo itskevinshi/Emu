@@ -63,22 +63,22 @@ int Disassemble8080Op(unsigned char *codebuffer, int pc)
         case 0x2e: printf("MVI    L,#$%02x", code[1]); opbytes=2; break;
         case 0x2f: printf("CMA"); break;
 
-        case 0x30:
-        case 0x31:
-        case 0x32:
-        case 0x33:
-        case 0x34:
-        case 0x35:
-        case 0x36:
-        case 0x37:
-        case 0x38:
-        case 0x39:
-        case 0x3a:
-        case 0x3b:
-        case 0x3c:
-        case 0x3d:
-        case 0x3e: printf("MVI    A,#0x%02x", code[1]); opbytes = 2; break;  
-        case 0x3f:   
+		case 0x30: printf("NOP"); break;
+		case 0x31: printf("LXI    SP,#$%02x%02x", code[2], code[1]); opbytes=3; break;
+		case 0x32: printf("STA    $%02x%02x", code[2], code[1]); opbytes=3; break;
+		case 0x33: printf("INX    SP"); break;
+		case 0x34: printf("INR    M"); break;
+		case 0x35: printf("DCR    M"); break;
+		case 0x36: printf("MVI    M,#$%02x", code[1]); opbytes=2; break;
+		case 0x37: printf("STC"); break;
+		case 0x38: printf("NOP"); break;
+		case 0x39: printf("DAD    SP"); break;
+		case 0x3a: printf("LDA    $%02x%02x", code[2], code[1]); opbytes=3; break;
+		case 0x3b: printf("DCX    SP"); break;
+		case 0x3c: printf("INR    A"); break;
+		case 0x3d: printf("DCR    A"); break;
+		case 0x3e: printf("MVI    A,#$%02x", code[1]); opbytes = 2; break;
+		case 0x3f: printf("CMC"); break;
 
         case 0x40:
         case 0x41:
