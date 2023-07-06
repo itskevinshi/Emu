@@ -80,7 +80,7 @@ int Disassemble8080Op(unsigned char *codebuffer, int pc)
         case 0x2e: printf("MVI    L,#$%02x", code[1]); opbytes=2; break;
         case 0x2f: printf("CMA"); break;
 
-		case 0x30: printf("NOP"); break;
+	    case 0x30: printf("NOP"); break;
 		case 0x31: printf("LXI    SP,#$%02x%02x", code[2], code[1]); opbytes=3; break;
 		case 0x32: printf("STA    $%02x%02x", code[2], code[1]); opbytes=3; break;
 		case 0x33: printf("INX    SP"); break;
@@ -97,22 +97,22 @@ int Disassemble8080Op(unsigned char *codebuffer, int pc)
 		case 0x3e: printf("MVI    A,#$%02x", code[1]); opbytes = 2; break;
 		case 0x3f: printf("CMC"); break;
 
-        case 0x40:
-        case 0x41:
-        case 0x42:
-        case 0x43:
-        case 0x44:
-        case 0x45:
-        case 0x46:
-        case 0x47:
-        case 0x48:
-        case 0x49:
-        case 0x4a:
-        case 0x4b:
-        case 0x4c:
-        case 0x4d:
-        case 0x4e:
-        case 0x4f:   
+        case 0x40: printf("MOV    B,B"); break;
+        case 0x41: printf("MOV    B,C"); break;
+        case 0x42: printf("MOV    B,D"); break;
+        case 0x43: printf("MOV    B,E"); break;
+        case 0x44: printf("MOV    B,H"); break;
+        case 0x45: printf("MOV    B,L"); break;
+        case 0x46: printf("MOV    B,M"); break;
+        case 0x47: printf("MOV    B,A"); break;
+        case 0x48: printf("MOV    C,B"); break;
+        case 0x49: printf("MOV    C,C"); break;
+        case 0x4a: printf("MOV    C,D"); break;
+        case 0x4b: printf("MOV    C,E"); break;
+        case 0x4c: printf("MOV    C,H"); break;
+        case 0x4d: printf("MOV    C,L"); break;
+        case 0x4e: printf("MOV    C,M"); break;
+        case 0x4f: printf("MOV    C,A"); break;
 
         case 0x50:
         case 0x51:
