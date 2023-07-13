@@ -165,22 +165,22 @@ int Disassemble8080Op(unsigned char *codebuffer, int pc)
         case 0x7e: printf("MOV    A,M"); break;
         case 0x7f: printf("MOV    A,A"); break;
 
-        case 0x80:
-        case 0x81:
-        case 0x82:
-        case 0x83:
-        case 0x84:
-        case 0x85:
-        case 0x86:
-        case 0x87:
-        case 0x88:
-        case 0x89:
-        case 0x8a:
-        case 0x8b:
-        case 0x8c:
-        case 0x8d:
-        case 0x8e:
-        case 0x8f:
+        case 0x80: printf("ADD    B"); break;
+        case 0x81: printf("ADD    C"); break;
+        case 0x82: printf("ADD    D"); break;
+        case 0x83: printf("ADD    E"); break;
+        case 0x84: printf("ADD    H"); break;
+        case 0x85: printf("ADD    L"); break;
+        case 0x86: printf("ADD    M"); break;
+        case 0x87: printf("ADD    A"); break;
+        case 0x88: printf("ADC    B"); break;
+        case 0x89: printf("ADC    C"); break;
+        case 0x8a: printf("ADC    D"); break;
+        case 0x8b: printf("ADC    E"); break;
+        case 0x8c: printf("ADC    H"); break;
+        case 0x8d: printf("ADC    L"); break;
+        case 0x8e: printf("ADC    M"); break;
+        case 0x8f: printf("ADC    A"); break;
 
         case 0x90:
         case 0x91:
