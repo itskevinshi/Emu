@@ -62,10 +62,10 @@ int Disassemble8080Op(unsigned char *codebuffer, int pc)
         case 0x1d: printf("DCR    E"); break;
         case 0x1e: printf("MVI    E,#$%02x", code[1]); opbytes = 2; break;
         case 0x1f: printf("RAR"); break;
-        
-		case 0x20: printf("NOP"); break;
-		case 0x21: printf("LXI    H,#$%02x%02x", code[2], code[1]); opbytes=3; break;
-		case 0x22: printf("SHLD   $%02x%02x", code[2], code[1]); opbytes=3; break;
+
+        case 0x20: printf("NOP"); break;
+        case 0x21: printf("LXI    H,#$%02x%02x", code[2], code[1]); opbytes=3; break;
+        case 0x22: printf("SHLD   $%02x%02x", code[2], code[1]); opbytes=3; break;
         case 0x23: printf("INX    H"); break;
         case 0x24: printf("INR    H"); break;
         case 0x25: printf("DCR    H"); break;
