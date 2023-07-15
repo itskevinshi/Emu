@@ -12,7 +12,6 @@ int Disassemble8080Op(unsigned char *codebuffer, int pc)
     printf ("%04x ", pc);    
     switch (*code)    
     {    
-
         /* 
         Bing AI answered these questions...
 
