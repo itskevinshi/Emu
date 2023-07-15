@@ -216,22 +216,22 @@ int Disassemble8080Op(unsigned char *codebuffer, int pc)
         case 0xae: printf("XRA    M"); break;
         case 0xaf: printf("XRA    A"); break;
 
-        case 0xb0:
-        case 0xb1:
-        case 0xb2:
-        case 0xb3:
-        case 0xb4:
-        case 0xb5:
-        case 0xb6:
-        case 0xb7:
-        case 0xb8:
-        case 0xb9:
-        case 0xba:
-        case 0xbb:
-        case 0xbc:
-        case 0xbd:
-        case 0xbe:
-        case 0xbf:
+        case 0xb0: printf("ORA    B"); break;
+        case 0xb1: printf("ORA    C"); break;
+        case 0xb2: printf("ORA    D"); break;
+        case 0xb3: printf("ORA    E"); break;
+        case 0xb4: printf("ORA    F"); break;
+        case 0xb5: printf("ORA    H"); break;
+        case 0xb6: printf("ORA    L"); break;
+        case 0xb7: printf("ORA    M"); break;
+        case 0xb8: printf("ORA    A"); break;
+        case 0xb9: printf("CMP    B"); break;
+        case 0xba: printf("CMP    C"); break;
+        case 0xbb: printf("CMP    D"); break;
+        case 0xbc: printf("CMP    E"); break;
+        case 0xbd: printf("CMP    F"); break;
+        case 0xbe: printf("CMP    H"); break;
+        case 0xbf: printf("CMP    B"); break;
 
         case 0xc0:
         case 0xc1:
