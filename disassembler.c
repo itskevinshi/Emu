@@ -182,22 +182,22 @@ int Disassemble8080Op(unsigned char *codebuffer, int pc)
         case 0x8e: printf("ADC    M"); break;
         case 0x8f: printf("ADC    A"); break;
 
-        case 0x90:
-        case 0x91:
-        case 0x92:
-        case 0x93:
-        case 0x94:
-        case 0x95:
-        case 0x96:
-        case 0x97:
-        case 0x98:
-        case 0x99:
-        case 0x9a:
-        case 0x9b:
-        case 0x9c:
-        case 0x9d:
-        case 0x9e:
-        case 0x9f:
+        case 0x90: printf("SUB    B"); break;
+        case 0x91: printf("SUB    C"); break;
+        case 0x92: printf("SUB    D"); break;
+        case 0x93: printf("SUB    E"); break;
+        case 0x94: printf("SUB    H"); break;
+        case 0x95: printf("SUB    L"); break;
+        case 0x96: printf("SUB    M"); break;
+        case 0x97: printf("SUB    A"); break;
+        case 0x98: printf("SUB    B"); break;
+        case 0x99: printf("SBB    C"); break;
+        case 0x9a: printf("SBB    D"); break;
+        case 0x9b: printf("SBB    E"); break;
+        case 0x9c: printf("SBB    H"); break;
+        case 0x9d: printf("SBB    L"); break;
+        case 0x9e: printf("SBB    M"); break;
+        case 0x9f: printf("SBB    A"); break;
 
         case 0xa0:
         case 0xa1:
