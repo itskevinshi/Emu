@@ -200,21 +200,21 @@ int Disassemble8080Op(unsigned char *codebuffer, int pc)
         case 0x9f: printf("SBB    A"); break;
 
         case 0xa0: printf("ANA    B"); break;
-        case 0xa1: printf("ANA    B"); break;
-        case 0xa2: printf("ANA    B"); break;
-        case 0xa3: printf("ANA    B"); break;
-        case 0xa4: printf("ANA    B"); break;
-        case 0xa5: printf("ANA    B"); break;
-        case 0xa6: printf("ANA    B"); break;
-        case 0xa7: printf("ANA    B"); break;
+        case 0xa1: printf("ANA    C"); break;
+        case 0xa2: printf("ANA    D"); break;
+        case 0xa3: printf("ANA    E"); break;
+        case 0xa4: printf("ANA    H"); break;
+        case 0xa5: printf("ANA    L"); break;
+        case 0xa6: printf("ANA    M"); break;
+        case 0xa7: printf("ANA    A"); break;
         case 0xa8: printf("XRA    B"); break;
-        case 0xa9: printf("XRA    B"); break;
-        case 0xaa: printf("XRA    B"); break;
-        case 0xab: printf("XRA    B"); break;
-        case 0xac: printf("XRA    B"); break;
-        case 0xad: printf("XRA    B"); break;
-        case 0xae: printf("XRA    B"); break;
-        case 0xaf: printf("XRA    B"); break;
+        case 0xa9: printf("XRA    C"); break;
+        case 0xaa: printf("XRA    D"); break;
+        case 0xab: printf("XRA    E"); break;
+        case 0xac: printf("XRA    H"); break;
+        case 0xad: printf("XRA    L"); break;
+        case 0xae: printf("XRA    M"); break;
+        case 0xaf: printf("XRA    A"); break;
 
         case 0xb0:
         case 0xb1:
