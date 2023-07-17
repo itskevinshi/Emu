@@ -249,7 +249,7 @@ int Disassemble8080Op(unsigned char *codebuffer, int pc)
 		case 0xce: printf("ACI    #$%02x",code[1]); opbytes = 2; break;
 		case 0xcf: printf("RST    1"); break;
 
-        case 0xd0:
+        case 0xd0: 
         case 0xd1:
         case 0xd2:
         case 0xd3:
