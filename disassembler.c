@@ -283,22 +283,22 @@ int Disassemble8080Op(unsigned char *codebuffer, int pc)
 		case 0xee: printf("XRI    #$%02x",code[1]); opbytes = 2; break;
 		case 0xef: printf("RST    5"); break;
 
-        case 0xf0:
-        case 0xf1:
-        case 0xf2:
-        case 0xf3:
-        case 0xf4:
-        case 0xf5:
-        case 0xf6:
-        case 0xf7:
-        case 0xf8:
-        case 0xf9:
-        case 0xfa:
-        case 0xfb:
-        case 0xfc:
-        case 0xfd:
-        case 0xfe:
-        case 0xff:
+		case 0xf0: printf("RP");  break;
+		case 0xf1: printf("POP    PSW"); break;
+		case 0xf2: printf("JP     $%02x%02x",code[2],code[1]); opbytes = 3; break;
+		case 0xf3: printf("DI");  break;
+		case 0xf4: printf("CP     $%02x%02x",code[2],code[1]); opbytes = 3; break;
+		case 0xf5: printf("PUSH   PSW"); break;
+		case 0xf6: printf("ORI    #$%02x",code[1]); opbytes = 2; break;
+		case 0xf7: printf("RST    6"); break;
+		case 0xf8: printf("RM");  break;
+		case 0xf9: printf("SPHL");break;
+		case 0xfa: printf("JM     $%02x%02x",code[2],code[1]); opbytes = 3; break;
+		case 0xfb: printf("EI");  break;
+		case 0xfc: printf("CM     $%02x%02x",code[2],code[1]); opbytes = 3; break;
+		case 0xfd: printf("CALL   $%02x%02x",code[2],code[1]); opbytes = 3; break;
+		case 0xfe: printf("CPI    #$%02x",code[1]); opbytes = 2; break;
+		case 0xff: printf("RST    7"); break;
     }    
 
     printf("\n");    
