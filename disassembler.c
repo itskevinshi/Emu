@@ -332,6 +332,13 @@ int Disassemble8080Op(unsigned char *codebuffer, int pc)
 	return opbytes;
 }
 
+void UnimplementedInstruction(State8080* state)    
+{    
+    //pc will have advanced one, so undo that    
+    printf ("Error: Unimplemented instruction\n");    
+    exit(1);    
+}    
+
 int main (int argc, char**argv)
 {    
     FILE *f = fopen(argv[1], "rb");    
